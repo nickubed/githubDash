@@ -1,32 +1,32 @@
 <script>
-    export let input;
+    // export let input;
 
-    let api = `https://api.github.com/users/${input}`;
+    // let api = `https://api.github.com/users/${input}`;
 
-    let avatar_url;
-    let name = '';
-    let blog = '';
-    let location = '';
-    let bio = '';
+    export let avatar_url;
+    export let name = '';
+    export let blog = '';
+    export let location = '';
+    export let bio = '';
 
  
-    fetch(api)
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        avatar_url = data.avatar_url;
-        name = data.name;
-        blog = data.blog;
-        location = data.location;
-        bio = data.bio;
-    })
-    .catch(err => {
-        console.log("Error while formatting weather info: ", err)
-    })
-    .catch(err => {
-        console.log("Error while fetching API data: ", err)
-    }); 
+    // fetch(api)
+    // .then(response => {
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     avatar_url = data.avatar_url;
+    //     name = data.name;
+    //     blog = data.blog;
+    //     location = data.location;
+    //     bio = data.bio;
+    // })
+    // .catch(err => {
+    //     console.log("Error while formatting weather info: ", err)
+    // })
+    // .catch(err => {
+    //     console.log("Error while fetching API data: ", err)
+    // }); 
 
 </script>
 

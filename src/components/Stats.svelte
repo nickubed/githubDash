@@ -2,52 +2,50 @@
     import { onMount } from 'svelte';
     import Clipboard from './Clipboard.svelte';
    
-    export let input;
-    let prevInput;
+    // export let input;
+    // let prevInput;
 
-    let apiRepo = `https://api.github.com/users/${input}/repos`;
+    // let apiRepo = `https://api.github.com/users/${input}/repos`;
 
-    let name = '';
-    let repoCount;
-    let popularData = '';
-    let popularName = '';
-    let popularUrl = '';
-    let popularDesc = '';
-    let popularClone = '';
-    let popularFork = '';
-    let stargazerCount = 0;
+    export let name = '';
+    export let repoCount;
+    // export let popularData = '';
+    export let popularName = '';
+    export let popularUrl = '';
+    export let popularDesc = '';
+    export let popularClone = '';
+    export let popularFork = '';
+    // export let stargazerCount = 0;
     
  
-    fetch(apiRepo)
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        //Number of Repos
-        repoCount = data.length;
-
-        //Calculate Most Popular Repo Based on Stars
-        data.forEach((repo) => {
-            if(repo.stargazers_count > stargazerCount){
-                popularData = repo;
-            }
-        });
-
-        //Assign Data from Most Popular Repo
-        name = popularData.owner.login;
-        popularName = popularData.name;
-        popularUrl = popularData.html_url;
-        popularDesc = popularData.description;
-        popularClone = popularData.clone_url;
-        popularFork = popularData.forks_count;
+    // fetch(apiRepo)
+    // .then(response => {
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     //Number of Repos
+    //     repoCount = data.length;
+    //     //Calculate Most Popular Repo Based on Stars
+    //     data.forEach((repo) => {
+    //         if(repo.stargazers_count > stargazerCount){
+    //             popularData = repo;
+    //         }
+    //     });
+    //     //Assign Data from Most Popular Repo
+    //     name = popularData.owner.login;
+    //     popularName = popularData.name;
+    //     popularUrl = popularData.html_url;
+    //     popularDesc = popularData.description;
+    //     popularClone = popularData.clone_url;
+    //     popularFork = popularData.forks_count;
     
-    })
-    .catch(err => {
-        console.log("Error while formatting weather info: ", err)
-    })
-    .catch(err => {
-        console.log("Error while fetching API data: ", err)
-    });
+    // })
+    // .catch(err => {
+    //     console.log("Error while formatting weather info: ", err)
+    // })
+    // .catch(err => {
+    //     console.log("Error while fetching API data: ", err)
+    // });
 
 
 </script>
