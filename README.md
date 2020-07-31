@@ -7,6 +7,7 @@ To run locally, clone this repo, then...
 &nbsp;  
 ```
 cd githubDash
+npm install
 npm run dev
 ```  
 &nbsp;  
