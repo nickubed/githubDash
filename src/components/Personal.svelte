@@ -1,33 +1,9 @@
 <script>
-    // export let input;
-
-    // let api = `https://api.github.com/users/${input}`;
-
     export let avatar_url;
     export let name = '';
     export let blog = '';
     export let location = '';
     export let bio = '';
-
- 
-    // fetch(api)
-    // .then(response => {
-    //     return response.json();
-    // })
-    // .then(data => {
-    //     avatar_url = data.avatar_url;
-    //     name = data.name;
-    //     blog = data.blog;
-    //     location = data.location;
-    //     bio = data.bio;
-    // })
-    // .catch(err => {
-    //     console.log("Error while formatting weather info: ", err)
-    // })
-    // .catch(err => {
-    //     console.log("Error while fetching API data: ", err)
-    // }); 
-
 </script>
 
 <div class="personal">
@@ -49,7 +25,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        text-align: right;
+        text-align: center;
         margin:.75rem;
     }
     .rnd-img{
@@ -64,6 +40,7 @@
     }
     @media screen and (min-width:1024px){
         .personal{
+            text-align: right;
             flex-direction: row;
         }
     }
